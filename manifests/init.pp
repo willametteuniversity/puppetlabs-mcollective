@@ -60,6 +60,7 @@ class mcollective (
   $ssl_ca_cert          = undef,
   $ssl_server_public    = undef,
   $ssl_server_private   = undef,
+  $ssl_server_cert      = undef,
   $ssl_client_certs     = 'puppet:///modules/mcollective/empty',
   $ssl_client_certs_dir = undef, # default dependent on $confdir
 ) inherits mcollective::defaults {

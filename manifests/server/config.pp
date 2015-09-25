@@ -43,6 +43,13 @@ class mcollective::server::config {
       source => $mcollective::ssl_ca_cert,
     }
 
+    file { "${mcollective::confdir}/server_cert.pem":
+      owner  => 'root',
+      group  => '0',
+      mode   => '0444',
+      source => $mcollective::ssl_server_cert,
+    }
+
     file { "${mcollective::confdir}/server_public.pem":
       owner  => 'root',
       group  => '0',
